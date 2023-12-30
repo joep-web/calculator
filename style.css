@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: math, Georgia, serif;
+}
+
+html, body
+{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #D6EAF8;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+}
+
+.calc {
+  background-color: #283747;
+  padding: 1rem;
+  border-radius: 5%;
+  height: 19em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.display-cont {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  height: 20%;
+  justify-content: flex-end;
+  border: solid 1.5px black;
+  border-radius: 5px;
+  margin-bottom: 3%;
+}
+
+.grid-cont {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.calc form input {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  background: #283747;
+  color: white;
+  text-align: right;
+}
+
+input[type="button"]:active {
+  transform: scale(0.9);
+  transition: transform 150ms;
+}
+
+.equal {
+  background-color: tan;
+  color: white;
+}
+
+#clear, #del, #percent, #divide, #multi, #minus, #plus {
+  background-color: #DCDCDC;
+  font-weight: 700;
+}
+
+#divide::after {
+  content: "÷";
+}
+
+#multi::after {
+  content: "x";
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  height: 2.3rem;
+  width: 25%;
+  background: #283747;
+  color: white;
+  border-radius: 5px;
+  padding: 2%;
+  transform: translateY(70%);
+}
+
+.info:hover {
+  transform: translateY(-70%);
+  transition: transform 150ms;
+}
+
+.info p {
+  font-family: 'Dhurjati', sans-serif;
+  font-size: 1.3rem;
+}
+
+.info a {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+
+/*laptop and pc*/
+@media screen and (min-width: 800px){
+  .calc form input {
+    padding: 15px;
+    font-size: 2.5rem;
+    border-radius: 15px;
+  }
+  
+  .calc {
+  background-color: #283747;
+  padding: 1.8rem;
+  border-radius: 5%;
+  height: 31%;
+  width: 60%;
+  }
+
+  .grid-cont {
+    gap: 10px;
+  }
+
+}
+
+/*cp landscape*/
+@media screen and (min-width: 599px) and (orientation: landscape) {
+  .calc {
+    height: 16em;
+    margin: 10em;
+    padding: 12px;
+    width: 25%;
+  }
+  
+  .calc form input {
+    border: none;
+    padding: 7px;
+    font-size: 0.8rem;
+    border-radius: 7px;
+  }
+
+  .grid-cont {
+    gap: 5px;
+  }
+}
