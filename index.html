@@ -11,37 +11,38 @@
     <div class="calc">
       <form>
         <div class="display-cont">
-          <input type="text" name="inpt" class="display" readonly>
+          <div class="prev-num"></div>
+          <div class="curr-num"></div>
         </div>
         <div class="grid-cont">
-          <input type="button" value ="AC" id="clear"/>   
+          <input type="button" value ="AC" id="clear" />   
           <input type="button" value="Del" id="del" />
-          <input type="button" value="%" id="percent"/>
-          <input type="button" value="÷" id="divide"/>
+          <input type="button" value="%" id="percent" data-percent/>
+          <input type="button" value="÷" id="divide" data-operator/>
           
         
-          <input type="button" value ="7"/>   
-          <input type="button" value="8" />
-          <input type="button" value="9" />
-          <input type="button" value="x" id="multi"/>
+          <input type="button" value ="7" data-num/>   
+          <input type="button" value="8" data-num/>
+          <input type="button" value="9" data-num/>
+          <input type="button" value="x" id="multi" data-operator/>
         
         
-          <input type="button" value ="4"/>   
-          <input type="button" value="5" />
-          <input type="button" value="6" />
-          <input type="button" value="-" id="minus"/>
+          <input type="button" value ="4" data-num/>   
+          <input type="button" value="5" data-num/>
+          <input type="button" value="6" data-num/>
+          <input type="button" value="-" id="minus" data-operator/>
         
         
-          <input type="button" value ="1"/>   
-          <input type="button" value="2" />
-          <input type="button" value="3" />
-          <input type="button" value="+" id="plus" />
+          <input type="button" value ="1" data-num/>   
+          <input type="button" value="2" data-num/>
+          <input type="button" value="3" data-num/>
+          <input type="button" value="+" id="plus" data-operator/>
         
         
-          <input type="button" value ="00"/>   
-          <input type="button" value="0" />
-          <input type="button" value="."/>
-          <input type="button" value="=" class="equal"/>
+          <input type="button" value ="00" data-num/>   
+          <input type="button" value="0" data-num/>
+          <input type="button" value="." data-num/>
+          <input type="button" value="=" class="equal" data-equals/>
         </div>
       </form>
     </div>
@@ -49,7 +50,6 @@
        <p>joep-web</p>
        <a href="https://github.com/joep-web"><img src="github.svg" height="15px" width="15px"/></a>
     </div>
-    
     <script src="script.js"></script>
   </body>
 </html>
